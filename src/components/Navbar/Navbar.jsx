@@ -7,7 +7,7 @@ const Navbar = () => {
         <div>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
-                    <a className="btn btn-ghost text-[32px] font-bold">Recipe Calories</a>
+                    <a className="btn btn-ghost text-2xl lg:text-[32px] font-bold">Recipe Calories</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-[rgba(21,11,43,0.70)]">
@@ -19,7 +19,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="flex gap-4">
-                        <div className="flex gap-2 pl-6 items-center bg-[rgba(21,11,43,0.05)] rounded-[50px] w-[260px] h-12">
+                        <div className="hidden lg:flex gap-2 pl-6 items-center bg-[rgba(21,11,43,0.05)] rounded-[50px] w-[260px] h-12">
                             <img className='size-6' src={search} alt="" />
                             <input className='h-full w-full rounded-r-[50px] outline-none text-[rgba(21,11,43,0.70)] bg-transparent font-normal text-base' placeholder='Search' type="text" />
                         </div>
