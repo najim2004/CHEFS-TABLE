@@ -2,7 +2,6 @@
 import './App.css'
 import Header from './components/Header/Header'
 import OurRecipes from './components/OurRecipes/OurRecipes'
-
 function App() {
 
   return (
@@ -10,7 +9,6 @@ function App() {
       <Header></Header>
       
       <OurRecipes></OurRecipes>
-      
     </div>
   )
 }

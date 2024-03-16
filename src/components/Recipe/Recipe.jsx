@@ -3,7 +3,7 @@ import calorie from '../../assets/calories.svg';
 
 import PropTypes from 'prop-types';
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleWTCook}) => {
 
     const { recipe_id, recipe_name, short_description, ingredients, preparing_time, calories, recipe_image } = recipe;
     return (
@@ -22,18 +22,19 @@ const Recipe = ({ recipe }) => {
             </ul>
             <hr className='mt-4 mb-6 border-t-[1px] border-[rgba(40,40,40,0.10)] w-full' />
             <div className="flex gap-4 text-[rgba(40,40,40,0.80)]">
-                <p className='flex gap-2 items-center'><img className='size-6 fira-sans' src={clock} alt="" />30 minutes</p>
-                <p className='flex gap-2 items-center'><img className='size-6 fira-sans' src={calorie} alt="" />600 calories</p>
+                <p className='flex gap-2 items-center'><img className='size-6 fira-sans' src={clock} alt="" />{preparing_time}</p>
+                <p className='flex gap-2 items-center'><img className='size-6 fira-sans' src={calorie} alt="" />{calories}</p>
             </div>
             <div className="flex  bottom-0">
-                <button className='btn bg-[#0BE58A] w-[170px] h-[50px] rounded-[50px] text-lg font-medium mt-6'>Want to Cook</button>
+                <button onClick={()=>handleWTCook(recipe)} className='btn bg-[#0BE58A] w-[170px] h-[50px] rounded-[50px] text-lg font-medium mt-6'>Want to Cook</button>
             </div>
         </div>
     );
 };
 
 Recipe.propTypes = {
-    recipe: PropTypes.object.isRequired
+    recipe: PropTypes.object.isRequired,
+    handleWTCook: PropTypes.func.isRequired
 };
 
 export default Recipe;
